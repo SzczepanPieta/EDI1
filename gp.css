@@ -1,0 +1,13 @@
+body {
+    background-color: rgba(79, 78, 80, 0.973);
+  }
+  
+  body {
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
