@@ -30,20 +30,8 @@
     var data = JSON.parse(response);
     buildChart(data);
   });">Data 3 pie chart</button></th>
-  <th><button onclick="loadJSON1(function(response) {
-    var data = JSON.parse(response);
-    buildChart2(data);
-  });">Data 1 bar chart</button></th>
-  <th><button onclick="loadJSON2(function(response) {
-    var data = JSON.parse(response);
-    buildChart2(data);
-  });">Data 2 bar chart</button></th>
-  <th><button onclick="loadJSON3(function(response) {
-    var data = JSON.parse(response);
-    buildChart2(data);
-  });">Data 3 bar chart</button></th>
+ 
   
-
 
   <script>
   
@@ -202,60 +190,7 @@
     
   
   </script>
-  <script>
-        function buildChart2(data) {
-          data.sort(function(a, b) {
-            return b.salary - a.salary;
-          });
-          
-          var topSalaries = data.slice(0, 5);
-          var labels = [];
-          var chartData = [];
-          topSalaries.forEach(function(row) {
-            labels.push(row.name);
-            chartData.push(row.salary);
-          });
-          
-          new Chart(document.getElementById("barChart"), {
-            type: 'bar',
-            data: {
-              labels: labels,
-              datasets: [{
-                label: 'Top 5 Salaries',
-                data: chartData,
-                backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)'
-                ],
-                borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)'
-                ],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              scales: {
-                yAxes: [{
-                  ticks: {
-                    beginAtZero: true
-                  }
-                }]
-              }
-            }
-          });
-        }
-        
-        
-      </script>
+ 
   
   <ul>
     <li>Tom Rastenski</li>
